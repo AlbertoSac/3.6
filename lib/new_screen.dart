@@ -9,7 +9,7 @@ class NewScreen extends StatefulWidget {
 
 class _NewScreenState extends State<NewScreen> {
   List<Pokemon> pokemonList = [];
-  int offset = 0; // Offset para la paginación
+  int offset = 0;
 
   @override
   void initState() {
@@ -28,7 +28,6 @@ class _NewScreenState extends State<NewScreen> {
         pokemonList = results.map<Pokemon>((result) => Pokemon.fromJson(result)).toList();
       });
 
-      // Obtener información detallada de cada Pokémon y actualizar la lista
       for (var pokemon in pokemonList) {
         final detailsResponse = await http.get(Uri.parse('https://pokeapi.co/api/v2/pokemon/${pokemon.id}/'));
         if (detailsResponse.statusCode == 200) {

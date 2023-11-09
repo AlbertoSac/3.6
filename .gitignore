@@ -42,3 +42,31 @@ app.*.map.json
 /android/app/debug
 /android/app/profile
 /android/app/release
+
+
+# Flutter/Dart specific
+.dart_tool/
+.pub/
+build/
+.idea/
+.vscode/
+
+# macOS specific
+.DS_Store
+
+# Windows specific
+Thumbs.db
+Desktop.ini
+
+# Android/Gradle specific
+build/
+.gradle/
+local.properties
+
+# iOS specific
+ios/Pods/
+ios/.symlinks/
+ios/Flutter/.last_build_id
+
+# Exclude large files
+windows/flutter/ephemeral/flutter_windows.dll.pdb
